@@ -3,6 +3,8 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+console.log(111, __dirname);
+
 module.exports = {
     entry: __dirname + "/src/main.js", //已多次提及的唯一入口文件
     output: {
