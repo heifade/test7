@@ -1,5 +1,5 @@
 function getValue() {
-    return 'Hellow World! 123';
+    return 'Hellow World! 1234567890';
 }
 
 document.write(getValue());
