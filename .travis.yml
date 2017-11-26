@@ -28,8 +28,9 @@
 
 jobs:
   include:
-    - stage: test
+    - stage: npm i
       script: "npm i"
+    - stage: build
       script: "npm run build"
     - stage: deploy
       # script: skip
