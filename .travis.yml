@@ -25,6 +25,11 @@
 #     repo: heifade/test7
 
 
+branches:
+  only:
+  - master
+
+
 
 jobs:
   include:
