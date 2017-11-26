@@ -28,10 +28,10 @@
 
 jobs:
   include:
-    - stage: unit tests
+    - stage: test
       script: "npm run build"
-    - stage: deploy to staging
-      script: skip
+    - stage: deploy
+      # script: skip
       deploy: &heroku
         provider: npm
         api_key: $NPM_TOKEN
