@@ -24,7 +24,7 @@ deploy:
   api_key: f8580c88-7362-4336-a6a7-0c77f728761d
   on:
     all_branches: true
-    repo: heifade/test7
+    repo: test7
 
 
 
