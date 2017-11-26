@@ -27,7 +27,7 @@
 jobs:
   include:
     - stage: build
-      script: "npm i && npm run build"
+      script: "npm i && npm run build && ls"
     - stage: deploy gh-pages
       script: "ls"
       deploy:
