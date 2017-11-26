@@ -19,12 +19,12 @@ deploy:
         
 
 
-deploy:
-  provider: npm
-  email: heifade@126.com
-  api_key: c2baad22-063f-4162-a53b-af7d0b34f39b
-  on:
-    repo: heifade/test7
+# deploy:
+#   provider: npm
+#   email: heifade@126.com
+#   api_key: c2baad22-063f-4162-a53b-af7d0b34f39b
+#   on:
+#     repo: heifade/test7
 
 
 
