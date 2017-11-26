@@ -27,7 +27,7 @@
 jobs:
   include:
     - stage: compile
-      script: "npm run build"
+      script: "npm i && npm run build"
     - stage: deploy
       script: skip
       deploy:
