@@ -23,5 +23,6 @@ deploy:
   email: heifade@126.com
   api_key: f8580c88-7362-4336-a6a7-0c77f728761d
   on:
+    tags: true
     repo: heifade/djd-test5
 
