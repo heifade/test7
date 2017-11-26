@@ -18,6 +18,7 @@ branches:
 #     branch: master
         
 
+
 deploy:
   provider: npm
   email: heifade@126.com
