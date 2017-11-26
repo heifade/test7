@@ -28,14 +28,6 @@ jobs:
   include:
     - stage: build
       script: "npm i && npm run build"
-    - stage: deploy npm
-      script: skip
-      deploy:
-        provider: npm
-        email: heifade@126.com
-        api_key: $NPM_TOKEN
-        on:
-          repo: heifade/test7
     - stage: deploy gh-pages
       script: skip
       deploy:
@@ -44,3 +36,12 @@ jobs:
         local_dir: build
         on:
           branch: master
+    - stage: deploy npm
+      script: skip
+      deploy:
+        provider: npm
+        email: heifade@126.com
+        api_key: $NPM_TOKEN
+        on:
+          repo: heifade/test7
+    
