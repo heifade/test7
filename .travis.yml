@@ -26,9 +26,9 @@
 
 jobs:
   include:
-    - stage:
+    - stage: compile
       script: "npm i && npm run build"
-    - stage:
+    - stage: deploy
       script: skip
       deploy:
         provider: pages
@@ -36,7 +36,7 @@ jobs:
         local_dir: "./build"
         on:
           branch: master
-    - stage:
+    - stage: deploy
       script: skip
       deploy:
         provider: npm
