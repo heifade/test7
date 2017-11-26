@@ -33,7 +33,7 @@ jobs:
       deploy:
         provider: pages
         github_token: $GITHUB_TOKEN
-        local_dir: build
+        # local_dir: build
         on:
           branch: master
     - stage: deploy npm
