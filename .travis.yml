@@ -26,18 +26,18 @@
 
 jobs:
   include:
-    - stage: build
-      script: "npm i && npm run build"
+    # - stage: build
+    #   script: "npm i && npm run build"
     - stage: deploy gh-pages
-      script: skip
+      script: "npm i && npm run build"
       deploy:
         provider: pages
         github_token: $GITHUB_TOKEN
-        # local_dir: build
+        local_dir: build
         on:
           branch: master
     - stage: deploy npm
-      script: skip
+      script: "npm i && npm run build"
       deploy:
         provider: npm
         email: heifade@126.com
