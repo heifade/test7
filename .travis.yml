@@ -24,15 +24,11 @@
 #   on:
 #     repo: heifade/test7
 
-
-
-
-
 jobs:
   include:
     - stage: build
       script: "npm i && npm run build"
-    - stage: deploy
+    - stage: deploy npm
       script: skip
       deploy:
         provider: npm
@@ -40,3 +36,12 @@ jobs:
         api_key: $NPM_TOKEN
         on:
           repo: heifade/test7
+    - stage: deploy gh-pages
+      script: skip
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        local_dir: build
+        on:
+          branch: master
