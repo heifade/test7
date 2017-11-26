@@ -7,15 +7,10 @@
     "build": "webpack"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/heifade/test.git"
+    
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/heifade/test/issues"
-  },
-  "homepage": "https://github.com/heifade/test#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
