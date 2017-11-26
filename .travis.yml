@@ -34,6 +34,9 @@ jobs:
       script: "npm run build"
     - stage: deploy
       # script: skip
-      deploy: &heroku
+      deploy:
         provider: npm
+        email: heifade@126.com
         api_key: $NPM_TOKEN
+        on:
+          repo: heifade/test7
