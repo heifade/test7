@@ -25,14 +25,13 @@
 #     repo: heifade/test7
 
 
-branches:
-  only:
-  - master
 
 
 
 jobs:
   include:
+    - stage: build
+      script: "npm run build"
     - stage: deploy
       script: skip
       deploy:
