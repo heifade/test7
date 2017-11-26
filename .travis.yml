@@ -9,22 +9,22 @@ branches:
   only:
   - master
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  local_dir: build
-  on:
-    branch: master
+# deploy:
+#   provider: pages
+#   skip_cleanup: true
+#   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+#   local_dir: build
+#   on:
+#     branch: master
         
 
 
-# deploy:
-#   provider: npm
-#   email: heifade@126.com
-#   api_key: c2baad22-063f-4162-a53b-af7d0b34f39b
-#   on:
-#     repo: heifade/test7
+deploy:
+  provider: npm
+  email: heifade@126.com
+  api_key: $NPM_TOKEN
+  on:
+    repo: heifade/test7
 
 
 
