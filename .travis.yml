@@ -29,7 +29,7 @@ jobs:
     - stage: build
       script: "npm i && npm run build"
     - stage: deploy gh-pages
-      script: skip
+      script: "ls"
       deploy:
         provider: pages
         github_token: $GITHUB_TOKEN
