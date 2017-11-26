@@ -9,7 +9,7 @@ branches:
   only:
   - master
 
-deploy: step1
+deploy: &step1
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
@@ -17,7 +17,7 @@ deploy: step1
   on:
     branch: master
   
-deploy: step2
+deploy: &step2
   provider: npm
   email: heifade@126.com
   api_key: $NPM_TOKEN
