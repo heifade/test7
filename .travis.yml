@@ -26,14 +26,12 @@
 
 
 
-
-
 jobs:
   include:
-    - stage: deploy
-      deploy: &step1
+    - stage: unit tests
+      script: "npm run build"
+    - stage: deploy to staging
+      script: skip
+      deploy: &heroku
         provider: npm
-        email: heifade@126.com
         api_key: $NPM_TOKEN
-        on: 
-          repo: heifade/test7
