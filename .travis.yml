@@ -30,8 +30,8 @@ jobs:
   include:
     - stage: npm i
       script: "npm i"
-    - stage: build
-      script: "npm run build"
+    # - stage: build
+      # script: "npm run build"
     - stage: deploy
       # script: skip
       deploy:
