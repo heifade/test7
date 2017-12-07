@@ -13,11 +13,9 @@ deploy:
   - provider: pages
     skip_cleanup: true
     github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-    local_dir: build
+    # local_dir: build
     on:
       branch: master
-  
-
   - provider: npm
     email: heifade@126.com
     api_key: $NPM_TOKEN
