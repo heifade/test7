@@ -1,47 +1,28 @@
-# language: node_js
-# node_js:
-#   - "8"
+language: node_js
+node_js:
+  - "8"
 
-# script :
-#   - "npm run build"
+script :
+  - "npm run build"
 
-# branches:
-#   only:
-#   - master
+branches:
+  only:
+  - master
 
-# deploy: &step1
-#   provider: pages
-#   skip_cleanup: true
-#   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-#   local_dir: build
-#   on:
-#     branch: master
+deploy:
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+    local_dir: build
+    on:
+      branch: master
   
-# deploy: &step2
-#   provider: npm
-#   email: heifade@126.com
-#   api_key: $NPM_TOKEN
-#   on:
-#     repo: heifade/test7
 
-jobs:
-  include:
-    - stage: compile
-      script: "npm i && npm run build"
-    - stage: deploy
-      script: skip
-      deploy:
-        provider: pages
-        github_token: $GITHUB_TOKEN
-        local_dir: build
-        on:
-          branch: master
-    - stage: deploy
-      script: skip
-      deploy:
-        provider: npm
-        email: heifade@126.com
-        api_key: $NPM_TOKEN
-        on:
-          repo: heifade/test7
+  - provider: npm
+    email: heifade@126.com
+    api_key: $NPM_TOKEN
+    on:
+      repo: heifade/test7
+
+
     
